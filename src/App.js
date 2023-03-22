@@ -1,7 +1,6 @@
 import './App.css';
-import { useState, useEffect } from "react";
 import { GetMonster } from './components/GetMonsters';
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Card from 'react-bootstrap/Card'
 export function GetMonster(){
     const [monsters, setMonsters] = useState([]);
     useEffect(() => {
@@ -11,27 +12,22 @@ export function GetMonster(){
         // console.log(data);
         fetchMonsters();
     }, [])
-    console.log(monsters);
+    // console.log(monsters);
     return (
-        <>
-        {monsters.map(({name, image, common_location, drops, description }) => (
-          <div>
+        <> 
+
+        {monsters.map(({name, image, common_locations, drops, description }) => (
+        <Card>
+            <div>
             <h2>{name}</h2>
-            <img src={image} />
-            <p>{common_location}</p>
-            <p>{description}</p>
-            <p>{drops}</p>
+            <img src={image} alt="Monster"/>
+            <p><strong>Locations:</strong> {common_locations}</p>
+            <p><strong>Description:</strong>{description}</p>
+            <p><strong>Loot:</strong> {drops}</p>
                 
             </div>
+        </Card>
         ))}
         </>
     );
 }
-
-// {users.map(
-//     ({
-//       name: { first, last },
-//       login: { uuid },
-//       picture: { large },
-//       location: { street, city, state, country, postcode },
-//     }) => {

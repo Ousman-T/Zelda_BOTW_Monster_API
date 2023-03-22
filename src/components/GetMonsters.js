@@ -17,7 +17,7 @@ export function GetMonster(){
         <> 
 
         {monsters.map(({name, image, common_locations, drops, description }) => (
-        <Card>
+        <Card className="card">
             <div>
             <h2>{name}</h2>
             <img src={image} alt="Monster"/>

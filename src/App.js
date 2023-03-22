@@ -7,7 +7,7 @@ function App() {
     
     <div className="App">
       <h1>Hyrule Monsters</h1>
-      <GetMonster />
+      <GetMonster key={GetMonster}/>
       
     </div>
   );
